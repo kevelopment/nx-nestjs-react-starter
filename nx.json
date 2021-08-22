@@ -1,7 +1,7 @@
 {
   "npmScope": "nx-nestjs-react-starter",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -33,16 +33,25 @@
   },
   "projects": {
     "api": {
-      "tags": []
+      "tags": [
+        "backend"
+      ]
     },
     "client": {
-      "tags": []
+      "tags": [
+        "frontend"
+      ]
     },
     "client-e2e": {
-      "tags": [],
+      "tags": [
+        "end-2-end-tests"
+      ],
       "implicitDependencies": [
         "client"
       ]
+    },
+    "types": {
+      "tags": ["module"]
     }
   }
 }

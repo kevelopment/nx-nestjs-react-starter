@@ -17,7 +17,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-nestjs-react-starter/types": [
+        "libs/types/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",

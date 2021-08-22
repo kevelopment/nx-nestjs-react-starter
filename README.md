@@ -11,30 +11,28 @@ This project was generated using [Nx](https://nx.dev).
 ## Project setup / initialization
 This project setup was created by executing folling steps
 
-### install nx globally
-> npm i nx
+1) install nx globally `npm i nx`
+2) initialize new nx workspace with default react-app  
+`npx create-nx-workspace@latest nx-nestjs-react-starter`
+3) use package manager of choice to install dependency for NestJS  
+`yarn add -D @nrwl/nest`  
+`npm install -D @nrwl/nest`
 
-### initialize new nx workspace with default react-app
-> npx create-nx-workspace@latest nx-nestjs-react-starter
+4) add a new nestjs app to the workspace  
+`npx nx g @nrwl/nest:app api --frontendProject=client`
 
-### use package manager of choice to install dependency for NestJS
-> yarn add -D @nrwl/nest
+5) add a shared library  
+`nx g @nrwl/node:library mylib`
 
-> npm install -D @nrwl/nest
-
-### add a new nestjs app to the workspace
-> npx nx g @nrwl/nest:app api --frontendProject=client
 
 ### adjust package.json  
-support linting and testing for all applications at once
-> "test": "npx nx run-many --all --target=test --parallel",
+support linting and testing for all applications at once  
+`"test": "npx nx run-many --all --target=test --parallel"`  
+`"lint": "nx workspace-lint && npx nx run-many --all --target=lint --parallel"`
 
-> "lint": "nx workspace-lint && npx nx run-many --all --target=lint --parallel",
-
-add separate run & build scripts for backend and frontend
-> "start:frontend": "nx run client:serve",
- 
-> "start:backend": "nx run api:serve",
+add separate run & build scripts for backend and frontend  
+`"start:client": "nx run client:serve"`   
+`"start:api": "nx run api:serve"`
 
 ## Adding capabilities to your workspace
 
@@ -42,18 +40,10 @@ Nx supports many plugins which add capabilities for developing different types o
 
 These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-Below are our core plugins:
-
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
 - [Nest](https://nestjs.com)
   - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
 - [Node](https://nodejs.org)
   - `npm install --save-dev @nrwl/node`
 
@@ -69,7 +59,8 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 ## Generate a library
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Run `nx g @nrwl/react:lib my-lib` to generate a react library.
+Run `nx g @nrwl/node:library mylib` to create a new node library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
@@ -106,17 +97,3 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
