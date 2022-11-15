@@ -2,27 +2,20 @@
 
 # NX NestJS React starter
 
+Bootstrapped, ready-for-production (Mono-)Repository for TypeScript environments using NestJS + React.
 This project was generated using [Nx](https://nx.dev).
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Smart, Extensible Build Framework**
 
 ## Project setup / initialization
 This project setup was created by executing folling steps
 
-1) install nx globally `npm i nx`
-2) initialize new nx workspace with default react-app  
-`npx create-nx-workspace@latest nx-nestjs-react-starter`
-3) use package manager of choice to install dependency for NestJS  
-`yarn add -D @nrwl/nest`  
-`npm install -D @nrwl/nest`
-
-4) add a new nestjs app to the workspace  
-`npx nx g @nrwl/nest:app api --frontendProject=client`
-
-5) add a shared library  
-`nx g @nrwl/node:library mylib`
+* install nx globally `npm i nx`
+* Use package manager of choice to  `yarn add -D @nrwl/nest` or `npm install -D @nrwl/nest`
+* add a new nestjs app to the workspace  
+   `npx nx g @nrwl/nest:app api --frontendProject=client`
+* add a shared `node` (= plain ts) library  
+   `nx g @nrwl/node:library mylib`
 
 
 ### adjust package.json  
