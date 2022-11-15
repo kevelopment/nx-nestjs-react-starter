@@ -1,5 +1,3 @@
-
-
 # NX NestJS React starter
 
 Bootstrapped, ready-for-production (Mono-)Repository for TypeScript environments using NestJS + React.
@@ -8,23 +6,20 @@ This project was generated using [Nx](https://nx.dev).
 🔎 **Smart, Extensible Build Framework**
 
 ## Project setup / initialization
+
 This project setup was created by executing folling steps
 
-* install nx globally `npm i nx`
-* Use package manager of choice to  `yarn add -D @nrwl/nest` or `npm install -D @nrwl/nest`
-* add a new nestjs app to the workspace  
-   `npx nx g @nrwl/nest:app api --frontendProject=client`
-* add a shared `node` (= plain ts) library  
-   `nx g @nrwl/node:library mylib`
+- install nx globally `npm i nx`
+- install dependencies `npm install` or `npm i`
 
+### adjust package.json
 
-### adjust package.json  
 support linting and testing for all applications at once  
 `"test": "npx nx run-many --all --target=test --parallel"`  
 `"lint": "nx workspace-lint && npx nx run-many --all --target=lint --parallel"`
 
 add separate run & build scripts for backend and frontend  
-`"start:client": "nx run client:serve"`   
+`"start:client": "nx run client:serve"`  
 `"start:api": "nx run api:serve"`
 
 ## Adding capabilities to your workspace
@@ -61,7 +56,7 @@ Libraries are shareable across libraries and applications. They can be imported 
 
 ## Development server
 
-Run `nx serve client` for a frontend dev server. Navigate to http://localhost:4200/. 
+Run `nx serve client` for a frontend dev server. Navigate to http://localhost:4200/.
 Run `nx serve api` for a backend dev server. Navigate to http://localhost:3333/api.  
 The app will automatically reload if you change any of the source files.
 
