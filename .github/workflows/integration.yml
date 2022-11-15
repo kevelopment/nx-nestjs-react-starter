@@ -22,7 +22,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Dependencies
-        run: npm i
+        run: npm install
 
   sanity-checks:
     needs: setup
@@ -46,7 +46,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Lint affected Files
-        run: npm run affected:lint
+        run: yarn nx affected:lint --base=origin/main --head=HEAD --with-deps
 
       - name: Test affected Files
-        run: npm run affected:test
+        run: yarn nx affected:test --base=origin/main --head=HEAD --with-deps
