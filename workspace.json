@@ -8,16 +8,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets"
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -42,16 +38,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/api/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/api"
-          ],
+          "outputs": ["coverage/apps/api"],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
@@ -66,22 +58,15 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/client",
             "index": "apps/client/src/index.html",
             "main": "apps/client/src/main.tsx",
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
-            "assets": [
-              "apps/client/src/favicon.ico",
-              "apps/client/src/assets"
-            ],
-            "styles": [
-              "apps/client/src/styles.scss"
-            ],
+            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+            "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -127,16 +112,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/client/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/client/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/client"
-          ],
+          "outputs": ["coverage/apps/client"],
           "options": {
             "jestConfig": "apps/client/jest.config.js",
             "passWithNoTests": true
@@ -165,9 +146,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/client-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/client-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -180,16 +159,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/types/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/types/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/types"
-          ],
+          "outputs": ["coverage/libs/types"],
           "options": {
             "jestConfig": "libs/types/jest.config.js",
             "passWithNoTests": true
