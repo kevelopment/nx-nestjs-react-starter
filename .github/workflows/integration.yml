@@ -27,8 +27,7 @@ jobs:
   sanity-checks:
     runs-on: ubuntu-latest
     name: Sanity Checks
-    needs:
-      - setup
+    needs: setup
     steps:
       - uses: actions/checkout@v2
         with:
@@ -49,8 +48,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Tests
-    needs:
-      - setup
+    needs: setup
     steps:
       - uses: actions/checkout@v2
         with:
